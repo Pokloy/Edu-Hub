@@ -2,13 +2,22 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import ProgressBar from "@/components/customUI/progressBar";
 import { Book, Clock, Trophy } from "lucide-react";
+
+interface Courses {
+  id: number;
+  title: string;
+  progress: number;
+  totalHours: number;
+  completedHours: number;
+}
 
 const enrolledCourses = [
   {
     id: 1,
     title: "Introduction to Web Development",
-    progress: 75,
+    progress: 48,
     totalHours: 20,
     completedHours: 15,
   },
@@ -74,7 +83,7 @@ export default function StudentDashboard() {
       {/* Course Progress */}
       <h2 className="text-xl font-semibold mb-4">Course Progress</h2>
       <div className="space-y-4">
-        {enrolledCourses.map((course) => (
+        {enrolledCourses.map((course: Courses) => (
           <Card key={course.id}>
             <CardContent className="pt-6">
               <div className="flex justify-between items-center mb-2">
@@ -83,7 +92,8 @@ export default function StudentDashboard() {
                   {course.completedHours}/{course.totalHours} hours
                 </span>
               </div>
-              <Progress value={course.progress} className="h-2" />
+              {/* <Progress value={course.progress} className="h-2" /> */}
+              <ProgressBar percentage={course.progress} className="h-2" />
               <div className="mt-1 text-sm text-muted-foreground text-right">
                 {course.progress}% Complete
               </div>
