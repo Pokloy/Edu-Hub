@@ -19,7 +19,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center py-20">
       <Card className="w-[400px]">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl text-center">Welcome back</CardTitle>

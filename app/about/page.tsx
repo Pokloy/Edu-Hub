@@ -62,7 +62,7 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <div className="container py-8 space-y-16 px-32">
+    <div className="container py-8 space-y-16 lg:px-32 px-5">
       {/* Hero Section */}
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-bold">About EduHub</h1>

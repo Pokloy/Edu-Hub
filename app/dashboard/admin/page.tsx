@@ -26,7 +26,7 @@ const courses = [
 
 export default function AdminDashboard() {
   return (
-    <div className="container py-8 px-32">
+    <div className="container py-8 lg:px-32 px-5">
       <h1 className="text-3xl font-bold mb-8">Admin Dashboard</h1>
 
       {/* Overview Cards */}

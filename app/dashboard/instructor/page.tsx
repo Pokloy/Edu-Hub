@@ -39,7 +39,7 @@ const courses = [
 
 export default function InstructorDashboard() {
   return (
-    <div className="container py-8 px-32">
+    <div className="container py-8 lg:px-32 px-5">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Instructor Dashboard</h1>
         <Button asChild>

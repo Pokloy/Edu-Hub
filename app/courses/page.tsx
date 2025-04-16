@@ -62,7 +62,7 @@ const courses = [
 
 export default function CoursesPage() {
   return (
-    <div className="container py-8 px-32">
+    <div className="container py-8 lg:px-32 px-5">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold mb-2">Browse Courses</h1>
