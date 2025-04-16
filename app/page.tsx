@@ -26,13 +26,27 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-8 bg-gradient-to-r from-primary/10 to-primary/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary">
+      <section className="relative min-h-[90vh] px-6 lg:px-8 overflow-hidden flex items-center justify-center">
+          {/* Background YouTube Video */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/EtVXi-fcZQE?autoplay=1&mute=1&controls=0&loop=1&playlist=EtVXi-fcZQE&modestbranding=1&showinfo=0&rel=0"
+                title="Background Video"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Foreground Content */}
+          <div className="relative z-10 max-w-7xl mx-auto text-white bg-black/40 backdrop-blur-md p-6 rounded-xl text-center space-y-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary text-white">
               Transform Your Future with Online Learning
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-white">
               Discover a world of knowledge with our comprehensive learning platform.
               Join thousands of students achieving their goals through quality education.
             </p>
@@ -40,13 +54,20 @@ export default function Home() {
               <Button size="lg" asChild>
                 <Link href="/courses">Explore Courses</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button
+                size="lg"
+                variant="ghost"
+                asChild
+                className="bg-transparent text-white border border-white hover:bg-white hover:text-black transition-colors duration-200"
+              >
                 <Link href="/signup">Get Started</Link>
               </Button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+
+
 
       {/* Features Section */}
       <section className="py-24 px-6 lg:px-8">
